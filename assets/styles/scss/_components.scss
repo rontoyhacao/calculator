@@ -1,0 +1,60 @@
+input {
+    border: none;
+    @include inset-box-shadow;
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    text-align: right;
+    outline: none;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        appearance: none;
+    }
+}
+button {
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 2.5rem;
+    width: 2.5rem;
+    @include box-shadow;
+    outline: none;
+    justify-self: center;
+    &:hover,
+    &:active,
+    &:focus {
+        background: $focus;
+    }
+    &:active {
+        @include inset-box-shadow;
+    }
+}
+
+.op__key {
+    color: $accent;
+}
+
+.clear__key {
+    color: $clear;
+}
+
+@media screen and (min-width: 19.0625em) {
+    button {
+        height: 3rem;
+        width: 3rem;
+    }
+}
+
+@media screen and (min-width: 20.625em) {
+    button {
+        height: 3.25rem;
+        width: 3.25rem;
+    }
+}
+
+@media screen and (min-width: 25em) {
+    button {
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+}

@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+* {
+  font-family: 'Fira Mono', monospace;
+  background: #D6D8E3;
+  font-size: inherit;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 23em) {
+  html {
+    font-size: 18px;
+  }
+}
+
+.main-container {
+  -webkit-box-shadow: -3px -3px 10px white, 6px 6px 10px #B4B6C9;
+          box-shadow: -3px -3px 10px white, 6px 6px 10px #B4B6C9;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.main-container .keys-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.wrapper {
+  width: 88%;
+  margin: 0 auto;
+  max-width: 19rem;
+}
+
+input {
+  border: none;
+  -webkit-box-shadow: inset -3px -3px 10px white, inset 6px 6px 10px #B4B6C9;
+          box-shadow: inset -3px -3px 10px white, inset 6px 6px 10px #B4B6C9;
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  text-align: right;
+  outline: none;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+button {
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 2.5rem;
+  width: 2.5rem;
+  -webkit-box-shadow: -3px -3px 10px white, 6px 6px 10px #B4B6C9;
+          box-shadow: -3px -3px 10px white, 6px 6px 10px #B4B6C9;
+  outline: none;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+button:hover, button:active, button:focus {
+  background: #dddee9;
+}
+
+button:active {
+  -webkit-box-shadow: inset -3px -3px 10px white, inset 6px 6px 10px #B4B6C9;
+          box-shadow: inset -3px -3px 10px white, inset 6px 6px 10px #B4B6C9;
+}
+
+.op__key {
+  color: #EF5416;
+}
+
+.clear__key {
+  color: #F23602;
+}
+
+@media screen and (min-width: 19.0625em) {
+  button {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+@media screen and (min-width: 20.625em) {
+  button {
+    height: 3.25rem;
+    width: 3.25rem;
+  }
+}
+
+@media screen and (min-width: 25em) {
+  button {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

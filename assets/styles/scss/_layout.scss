@@ -1,0 +1,14 @@
+.main-container {
+    @include box-shadow;
+    padding: 1rem;
+    border-radius: 2rem;
+    .keys-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+}
+.wrapper {
+    @include wide-container;
+}
