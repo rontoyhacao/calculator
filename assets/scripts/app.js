@@ -8,7 +8,7 @@ document.querySelectorAll('.num__key').forEach(el => {
 // step 2: array where operations would be stored
 const buffer = [];
 
-// step 4: adding function to the percent operator
+// step 4: conversion of input value to float and adding function to the percent operator
 const operatorCallback = operator => () => {
     let currentVal = parseFloat(input.value);
 
