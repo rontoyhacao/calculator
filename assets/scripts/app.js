@@ -1,11 +1,14 @@
 const input = document.querySelector('input');
 
+// step 1: adding value function on the input
 document.querySelectorAll('.num__key').forEach(el => {
     el.onclick = () => input.value = input.value !== '0' ? input.value + el.innerText : el.innerText;
 });
 
+// step 2: array where operations would be stored
 const buffer = [];
 
+// step 4: adding function to the percent operator
 const operatorCallback = operator => () => {
     let currentVal = parseFloat(input.value);
 
@@ -30,6 +33,7 @@ const operatorCallback = operator => () => {
     }
 }
 
+// step 5: adding functions to the rest of the operators
 const evaluate = buffer => {
     const secondOperand = buffer.pop().value;
     const operator = buffer.pop().value;
@@ -50,10 +54,12 @@ const evaluate = buffer => {
     }
 };
 
+// step 3: calling the operations
 for (const operator of ['add', 'subtract', 'multiply', 'divide', 'percent']) {
     document.querySelector(`.op__key[op=${operator}]`).onclick = operatorCallback(operator);
 }
 
+// step 6: adding equal function
 document.querySelector('#eq__key').onclick = () => {
     if (buffer && buffer.length) {
         buffer.push({ value: parseFloat(input.value)});
@@ -61,9 +67,11 @@ document.querySelector('#eq__key').onclick = () => {
     }
 }
 
+// step 7: adding clear function
 document.querySelector('.op__key[op=clear]').onclick = () => {
     input.value = 0;
     buffer.length = 0;
 };
 
+// step 8: adding negate function
 document.querySelector('.op__key[op=negate]').onclick = () => input.value = -parseFloat(input.value);
